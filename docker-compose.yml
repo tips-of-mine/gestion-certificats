@@ -7,6 +7,7 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"     # Pour l'interface web
+      - "443:443"   # Pour l'interface web sécurisé
       - "2560:2560" # Pour le serveur OCSP
     environment:
       - ROOT_DOMAIN=example.com

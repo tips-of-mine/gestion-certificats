@@ -1,9 +1,9 @@
 <?php
 header('Content-Type: application/json');
 
-// Comment out error reporting to prevent it from corrupting JSON output
-// ini_set('display_errors', 1);
-// error_reporting(E_ALL);
+// Disable error reporting to prevent it from corrupting JSON output
+ini_set('display_errors', 'Off');
+error_reporting(0);
 
 // Allow CORS for the frontend
 header('Access-Control-Allow-Origin: *');

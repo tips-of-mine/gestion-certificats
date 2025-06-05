@@ -1,0 +1,130 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Créer",
+    "actions": "Actions"
+  },
+  "header": {
+    "title": "Gestion de Certificats",
+    "openUserMenu": "Ouvrir le menu utilisateur",
+    "logout": "Déconnexion"
+  },
+  "sidebar": {
+    "title": "Menu",
+    "dashboard": "Tableau de bord",
+    "createCertificate": "Créer un Certificat",
+    "userManagement": "Gestion des Utilisateurs",
+    "history": "Historique",
+    "version": "Version"
+  },
+  "footer": {
+    "repository": "Dépôt Officiel"
+  },
+  "login": {
+    "title": "Gestion de Certificats",
+    "subtitle": "Connectez-vous à votre compte",
+    "invalidCredentials": "Nom d'utilisateur ou mot de passe invalide",
+    "error": "Une erreur s'est produite lors de la connexion",
+    "form": {
+      "username": "Nom d'utilisateur",
+      "password": "Mot de passe",
+      "submit": "Se connecter"
+    },
+    "language": "Langue"
+  },
+  "dashboard": {
+    "title": "Tableau de bord des Certificats",
+    "subtitle": "Visualiser et gérer vos certificats SSL/TLS",
+    "certificatesList": "Certificats",
+    "noCertificates": "Aucun certificat trouvé",
+    "status": {
+      "active": "Actif",
+      "revoked": "Révoqué"
+    },
+    "table": {
+      "name": "Nom",
+      "domain": "Domaine",
+      "issued": "Date d'émission",
+      "expiry": "Date d'expiration",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "actions": {
+      "revoke": "Révoquer"
+    },
+    "modal": {
+      "title": "Révoquer le Certificat",
+      "description": "Êtes-vous sûr de vouloir révoquer le certificat pour {name} ? Cette action est irréversible.",
+      "confirm": "Révoquer",
+      "cancel": "Annuler"
+    }
+  },
+  "createCertificate": {
+    "title": "Créer un Nouveau Certificat",
+    "subtitle": "Générer un nouveau certificat SSL/TLS",
+    "successMessage": "Certificat créé avec succès !",
+    "form": {
+      "domain": {
+        "label": "Nom de domaine",
+        "required": "Le nom de domaine est requis",
+        "pattern": "Veuillez entrer un nom de domaine valide",
+        "help": "Entrez le nom de domaine pour votre certificat (ex : exemple.com)"
+      },
+      "additionalParam": {
+        "label": "Paramètre additionnel",
+        "required": "Le paramètre additionnel est requis",
+        "help": "Paramètre additionnel requis par le processus de création de certificat"
+      },
+      "submit": "Créer le Certificat"
+    }
+  },
+  "userManagement": {
+    "title": "Gestion des Utilisateurs",
+    "subtitle": "Ajouter, modifier ou supprimer des comptes utilisateurs",
+    "unauthorized": "Accès non autorisé",
+    "adminOnly": "Cette page est accessible uniquement aux administrateurs",
+    "addUser": "Ajouter un Nouvel Utilisateur",
+    "usersList": "Utilisateurs",
+    "form": {
+      "username": "Nom d'utilisateur",
+      "password": "Mot de passe",
+      "role": "Rôle",
+      "roles": {
+        "admin": "Administrateur",
+        "user": "Utilisateur standard"
+      },
+      "submit": "Ajouter l'utilisateur"
+    },
+    "modal": {
+      "title": "Supprimer l'utilisateur",
+      "description": "Êtes-vous sûr de vouloir supprimer l'utilisateur {username} ? Cette action est irréversible.",
+      "confirm": "Supprimer",
+      "cancel": "Annuler"
+    }
+  },
+  "history": {
+    "title": "Historique des Actions",
+    "subtitle": "Consultez l'historique des actions de gestion des certificats",
+    "activityLog": "Journal d'activité",
+    "noEntries": "Aucune entrée d'historique trouvée",
+    "table": {
+      "timestamp": "Horodatage",
+      "user": "Utilisateur",
+      "action": "Action",
+      "certificate": "Certificat"
+    },
+    "actions": {
+      "create": "Création",
+      "revoke": "Révocation"
+    }
+  },
+  "notFound": {
+    "title": "Page non trouvée",
+    "message": "Désolé, nous n'avons pas trouvé la page que vous cherchez.",
+    "backHome": "Retour à l'accueil"
+  }
+}

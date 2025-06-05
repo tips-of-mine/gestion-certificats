@@ -1,0 +1,130 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "actions": "Acciones"
+  },
+  "header": {
+    "title": "Gestor de Certificados",
+    "openUserMenu": "Abrir menú de usuario",
+    "logout": "Cerrar sesión"
+  },
+  "sidebar": {
+    "title": "Menú",
+    "dashboard": "Panel principal",
+    "createCertificate": "Crear Certificado",
+    "userManagement": "Gestión de Usuarios",
+    "history": "Historial",
+    "version": "Versión"
+  },
+  "footer": {
+    "repository": "Repositorio Oficial"
+  },
+  "login": {
+    "title": "Gestor de Certificados",
+    "subtitle": "Inicia sesión en tu cuenta",
+    "invalidCredentials": "Nombre de usuario o contraseña inválidos",
+    "error": "Se produjo un error durante el inicio de sesión",
+    "form": {
+      "username": "Nombre de usuario",
+      "password": "Contraseña",
+      "submit": "Iniciar sesión"
+    },
+    "language": "Idioma"
+  },
+  "dashboard": {
+    "title": "Panel de Certificados",
+    "subtitle": "Visualiza y gestiona tus certificados SSL/TLS",
+    "certificatesList": "Certificados",
+    "noCertificates": "No se encontraron certificados",
+    "status": {
+      "active": "Activo",
+      "revoked": "Revocado"
+    },
+    "table": {
+      "name": "Nombre",
+      "domain": "Dominio",
+      "issued": "Fecha de emisión",
+      "expiry": "Fecha de caducidad",
+      "status": "Estado",
+      "actions": "Acciones"
+    },
+    "actions": {
+      "revoke": "Revocar"
+    },
+    "modal": {
+      "title": "Revocar Certificado",
+      "description": "¿Estás seguro de que quieres revocar el certificado para {name}? Esta acción no se puede deshacer.",
+      "confirm": "Revocar",
+      "cancel": "Cancelar"
+    }
+  },
+  "createCertificate": {
+    "title": "Crear Nuevo Certificado",
+    "subtitle": "Genera un nuevo certificado SSL/TLS",
+    "successMessage": "¡Certificado creado con éxito!",
+    "form": {
+      "domain": {
+        "label": "Nombre de dominio",
+        "required": "El nombre de dominio es obligatorio",
+        "pattern": "Por favor, introduce un nombre de dominio válido",
+        "help": "Introduce el nombre de dominio para tu certificado (ej: ejemplo.es)"
+      },
+      "additionalParam": {
+        "label": "Parámetro adicional",
+        "required": "El parámetro adicional es obligatorio",
+        "help": "Parámetro adicional requerido por el proceso de creación de certificado"
+      },
+      "submit": "Crear Certificado"
+    }
+  },
+  "userManagement": {
+    "title": "Gestión de Usuarios",
+    "subtitle": "Añadir, editar o eliminar cuentas de usuario",
+    "unauthorized": "Acceso no autorizado",
+    "adminOnly": "Esta página solo es accesible para administradores",
+    "addUser": "Añadir Nuevo Usuario",
+    "usersList": "Usuarios",
+    "form": {
+      "username": "Nombre de usuario",
+      "password": "Contraseña",
+      "role": "Rol",
+      "roles": {
+        "admin": "Administrador",
+        "user": "Usuario estándar"
+      },
+      "submit": "Añadir Usuario"
+    },
+    "modal": {
+      "title": "Eliminar Usuario",
+      "description": "¿Estás seguro de que quieres eliminar al usuario {username}? Esta acción no se puede deshacer.",
+      "confirm": "Eliminar",
+      "cancel": "Cancelar"
+    }
+  },
+  "history": {
+    "title": "Historial de Acciones",
+    "subtitle": "Visualiza el historial de acciones de gestión de certificados",
+    "activityLog": "Registro de Actividad",
+    "noEntries": "No se encontraron entradas en el historial",
+    "table": {
+      "timestamp": "Fecha y hora",
+      "user": "Usuario",
+      "action": "Acción",
+      "certificate": "Certificado"
+    },
+    "actions": {
+      "create": "Creación",
+      "revoke": "Revocación"
+    }
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "message": "Lo sentimos, no pudimos encontrar la página que estás buscando.",
+    "backHome": "Volver al inicio"
+  }
+}

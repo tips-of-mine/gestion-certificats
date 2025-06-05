@@ -1,0 +1,130 @@
+{
+  "common": {
+    "loading": "Caricamento...",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "create": "Crea",
+    "actions": "Azioni"
+  },
+  "header": {
+    "title": "Gestione Certificati",
+    "openUserMenu": "Apri menu utente",
+    "logout": "Disconnetti"
+  },
+  "sidebar": {
+    "title": "Menu",
+    "dashboard": "Dashboard",
+    "createCertificate": "Crea Certificato",
+    "userManagement": "Gestione Utenti",
+    "history": "Cronologia",
+    "version": "Versione"
+  },
+  "footer": {
+    "repository": "Repository Ufficiale"
+  },
+  "login": {
+    "title": "Gestione Certificati",
+    "subtitle": "Accedi al tuo account",
+    "invalidCredentials": "Nome utente o password non validi",
+    "error": "Si è verificato un errore durante l'accesso",
+    "form": {
+      "username": "Nome utente",
+      "password": "Password",
+      "submit": "Accedi"
+    },
+    "language": "Lingua"
+  },
+  "dashboard": {
+    "title": "Dashboard Certificati",
+    "subtitle": "Visualizza e gestisci i tuoi certificati SSL/TLS",
+    "certificatesList": "Certificati",
+    "noCertificates": "Nessun certificato trovato",
+    "status": {
+      "active": "Attivo",
+      "revoked": "Revocato"
+    },
+    "table": {
+      "name": "Nome",
+      "domain": "Dominio",
+      "issued": "Data di emissione",
+      "expiry": "Data di scadenza",
+      "status": "Stato",
+      "actions": "Azioni"
+    },
+    "actions": {
+      "revoke": "Revoca"
+    },
+    "modal": {
+      "title": "Revoca Certificato",
+      "description": "Sei sicuro di voler revocare il certificato per {name}? Questa azione non può essere annullata.",
+      "confirm": "Revoca",
+      "cancel": "Annulla"
+    }
+  },
+  "createCertificate": {
+    "title": "Crea Nuovo Certificato",
+    "subtitle": "Genera un nuovo certificato SSL/TLS",
+    "successMessage": "Certificato creato con successo!",
+    "form": {
+      "domain": {
+        "label": "Nome dominio",
+        "required": "Il nome dominio è obbligatorio",
+        "pattern": "Inserisci un nome dominio valido",
+        "help": "Inserisci il nome dominio per il tuo certificato (es. esempio.it)"
+      },
+      "additionalParam": {
+        "label": "Parametro aggiuntivo",
+        "required": "Il parametro aggiuntivo è obbligatorio",
+        "help": "Parametro aggiuntivo richiesto dal processo di creazione del certificato"
+      },
+      "submit": "Crea Certificato"
+    }
+  },
+  "userManagement": {
+    "title": "Gestione Utenti",
+    "subtitle": "Aggiungi, modifica o rimuovi account utenti",
+    "unauthorized": "Accesso non autorizzato",
+    "adminOnly": "Questa pagina è accessibile solo agli amministratori",
+    "addUser": "Aggiungi Nuovo Utente",
+    "usersList": "Utenti",
+    "form": {
+      "username": "Nome utente",
+      "password": "Password",
+      "role": "Ruolo",
+      "roles": {
+        "admin": "Amministratore",
+        "user": "Utente standard"
+      },
+      "submit": "Aggiungi Utente"
+    },
+    "modal": {
+      "title": "Elimina Utente",
+      "description": "Sei sicuro di voler eliminare l'utente {username}? Questa azione non può essere annullata.",
+      "confirm": "Elimina",
+      "cancel": "Annulla"
+    }
+  },
+  "history": {
+    "title": "Cronologia Azioni",
+    "subtitle": "Visualizza la cronologia delle azioni di gestione dei certificati",
+    "activityLog": "Registro delle attività",
+    "noEntries": "Nessuna voce nella cronologia trovata",
+    "table": {
+      "timestamp": "Data e ora",
+      "user": "Utente",
+      "action": "Azione",
+      "certificate": "Certificato"
+    },
+    "actions": {
+      "create": "Creazione",
+      "revoke": "Revoca"
+    }
+  },
+  "notFound": {
+    "title": "Pagina non trovata",
+    "message": "Spiacenti, non abbiamo trovato la pagina che stai cercando.",
+    "backHome": "Torna alla home"
+  }
+}

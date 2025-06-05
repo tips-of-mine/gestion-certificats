@@ -1,0 +1,130 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "actions": "Actions"
+  },
+  "header": {
+    "title": "Certificate Manager",
+    "openUserMenu": "Open user menu",
+    "logout": "Logout"
+  },
+  "sidebar": {
+    "title": "Menu",
+    "dashboard": "Dashboard",
+    "createCertificate": "Create Certificate",
+    "userManagement": "User Management",
+    "history": "History",
+    "version": "Version"
+  },
+  "footer": {
+    "repository": "Official Repository"
+  },
+  "login": {
+    "title": "Certificate Manager",
+    "subtitle": "Sign in to your account",
+    "invalidCredentials": "Invalid username or password",
+    "error": "An error occurred during login",
+    "form": {
+      "username": "Username",
+      "password": "Password",
+      "submit": "Sign in"
+    },
+    "language": "Language"
+  },
+  "dashboard": {
+    "title": "Certificates Dashboard",
+    "subtitle": "View and manage your SSL/TLS certificates",
+    "certificatesList": "Certificates",
+    "noCertificates": "No certificates found",
+    "status": {
+      "active": "Active",
+      "revoked": "Revoked"
+    },
+    "table": {
+      "name": "Name",
+      "domain": "Domain",
+      "issued": "Issued Date",
+      "expiry": "Expiry Date",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "actions": {
+      "revoke": "Revoke"
+    },
+    "modal": {
+      "title": "Revoke Certificate",
+      "description": "Are you sure you want to revoke the certificate for {name}? This action cannot be undone.",
+      "confirm": "Revoke",
+      "cancel": "Cancel"
+    }
+  },
+  "createCertificate": {
+    "title": "Create New Certificate",
+    "subtitle": "Generate a new SSL/TLS certificate",
+    "successMessage": "Certificate created successfully!",
+    "form": {
+      "domain": {
+        "label": "Domain Name",
+        "required": "Domain name is required",
+        "pattern": "Please enter a valid domain name",
+        "help": "Enter the domain name for your certificate (e.g., example.com)"
+      },
+      "additionalParam": {
+        "label": "Additional Parameter",
+        "required": "Additional parameter is required",
+        "help": "Additional parameter required by the certificate creation process"
+      },
+      "submit": "Create Certificate"
+    }
+  },
+  "userManagement": {
+    "title": "User Management",
+    "subtitle": "Add, edit, or remove user accounts",
+    "unauthorized": "Unauthorized Access",
+    "adminOnly": "This page is only accessible to administrators",
+    "addUser": "Add New User",
+    "usersList": "Users",
+    "form": {
+      "username": "Username",
+      "password": "Password",
+      "role": "Role",
+      "roles": {
+        "admin": "Administrator",
+        "user": "Standard User"
+      },
+      "submit": "Add User"
+    },
+    "modal": {
+      "title": "Delete User",
+      "description": "Are you sure you want to delete the user {username}? This action cannot be undone.",
+      "confirm": "Delete",
+      "cancel": "Cancel"
+    }
+  },
+  "history": {
+    "title": "Action History",
+    "subtitle": "View the history of certificate management actions",
+    "activityLog": "Activity Log",
+    "noEntries": "No history entries found",
+    "table": {
+      "timestamp": "Timestamp",
+      "user": "User",
+      "action": "Action",
+      "certificate": "Certificate"
+    },
+    "actions": {
+      "create": "Create",
+      "revoke": "Revoke"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "message": "Sorry, we couldn't find the page you're looking for.",
+    "backHome": "Back to home"
+  }
+}

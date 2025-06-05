@@ -1,0 +1,130 @@
+{
+  "common": {
+    "loading": "Wird geladen...",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "create": "Erstellen",
+    "actions": "Aktionen"
+  },
+  "header": {
+    "title": "Zertifikatsverwaltung",
+    "openUserMenu": "Benutzermenü öffnen",
+    "logout": "Abmelden"
+  },
+  "sidebar": {
+    "title": "Menü",
+    "dashboard": "Dashboard",
+    "createCertificate": "Zertifikat erstellen",
+    "userManagement": "Benutzerverwaltung",
+    "history": "Verlauf",
+    "version": "Version"
+  },
+  "footer": {
+    "repository": "Offizielles Repository"
+  },
+  "login": {
+    "title": "Zertifikatsverwaltung",
+    "subtitle": "Melden Sie sich an",
+    "invalidCredentials": "Ungültiger Benutzername oder Passwort",
+    "error": "Bei der Anmeldung ist ein Fehler aufgetreten",
+    "form": {
+      "username": "Benutzername",
+      "password": "Passwort",
+      "submit": "Anmelden"
+    },
+    "language": "Sprache"
+  },
+  "dashboard": {
+    "title": "Zertifikate Dashboard",
+    "subtitle": "SSL/TLS-Zertifikate anzeigen und verwalten",
+    "certificatesList": "Zertifikate",
+    "noCertificates": "Keine Zertifikate gefunden",
+    "status": {
+      "active": "Aktiv",
+      "revoked": "Widerrufen"
+    },
+    "table": {
+      "name": "Name",
+      "domain": "Domain",
+      "issued": "Ausstellungsdatum",
+      "expiry": "Ablaufdatum",
+      "status": "Status",
+      "actions": "Aktionen"
+    },
+    "actions": {
+      "revoke": "Widerrufen"
+    },
+    "modal": {
+      "title": "Zertifikat widerrufen",
+      "description": "Sind Sie sicher, dass Sie das Zertifikat für {name} widerrufen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirm": "Widerrufen",
+      "cancel": "Abbrechen"
+    }
+  },
+  "createCertificate": {
+    "title": "Neues Zertifikat erstellen",
+    "subtitle": "Generieren Sie ein neues SSL/TLS-Zertifikat",
+    "successMessage": "Zertifikat erfolgreich erstellt!",
+    "form": {
+      "domain": {
+        "label": "Domain-Name",
+        "required": "Domain-Name ist erforderlich",
+        "pattern": "Bitte geben Sie einen gültigen Domain-Namen ein",
+        "help": "Geben Sie den Domain-Namen für Ihr Zertifikat ein (z.B. beispiel.de)"
+      },
+      "additionalParam": {
+        "label": "Zusätzlicher Parameter",
+        "required": "Zusätzlicher Parameter ist erforderlich",
+        "help": "Zusätzlicher Parameter, der für den Zertifikaterstellungsprozess erforderlich ist"
+      },
+      "submit": "Zertifikat erstellen"
+    }
+  },
+  "userManagement": {
+    "title": "Benutzerverwaltung",
+    "subtitle": "Benutzerkonten hinzufügen, bearbeiten oder entfernen",
+    "unauthorized": "Unbefugter Zugriff",
+    "adminOnly": "Diese Seite ist nur für Administratoren zugänglich",
+    "addUser": "Neuen Benutzer hinzufügen",
+    "usersList": "Benutzer",
+    "form": {
+      "username": "Benutzername",
+      "password": "Passwort",
+      "role": "Rolle",
+      "roles": {
+        "admin": "Administrator",
+        "user": "Standardbenutzer"
+      },
+      "submit": "Benutzer hinzufügen"
+    },
+    "modal": {
+      "title": "Benutzer löschen",
+      "description": "Sind Sie sicher, dass Sie den Benutzer {username} löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen"
+    }
+  },
+  "history": {
+    "title": "Aktionsverlauf",
+    "subtitle": "Sehen Sie den Verlauf der Zertifikatsverwaltungsaktionen",
+    "activityLog": "Aktivitätsprotokoll",
+    "noEntries": "Keine Verlaufseinträge gefunden",
+    "table": {
+      "timestamp": "Zeitstempel",
+      "user": "Benutzer",
+      "action": "Aktion",
+      "certificate": "Zertifikat"
+    },
+    "actions": {
+      "create": "Erstellen",
+      "revoke": "Widerrufen"
+    }
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "message": "Entschuldigung, wir konnten die gesuchte Seite nicht finden.",
+    "backHome": "Zurück zur Startseite"
+  }
+}

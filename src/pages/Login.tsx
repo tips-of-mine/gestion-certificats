@@ -48,7 +48,8 @@ export default function Login() {
       } else {
         setError(t('login.invalidCredentials'));
       }
-    } catch (_) {
+    } catch {
+      // Catch error but we don't need to use the error object
       setError(t('login.error'));
     } finally {
       setIsLoading(false);

@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  certificate-manager:
+    build: .
+    container_name: certificate-manager
+    restart: unless-stopped
+    ports:
+      - "80:80"     # Pour l'interface web
+      - "2560:2560" # Pour le serveur OCSP
+    environment:
+      - ROOT_DOMAIN=example.com
+      - OCSP_URL=http://localhost:2560
+      - SAN=DNS:certs.example.com
+    volumes:
+      - cert-data:/root/tls
+      - logs-data:/var/www/html/api/logs
+      - api-data:/var/www/html/api/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  cert-data:
+    name: certificate-manager-tls
+  logs-data:
+    name: certificate-manager-logs
+  api-data:
+    name: certificate-manager-api-data

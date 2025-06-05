@@ -18,12 +18,6 @@ type AuthStore = {
   deleteUser: (id: string) => void;
 };
 
-// Mock user data - in a real app, this would be stored securely on the server
-const initialUsers = [
-  { id: '1', username: 'admin', password: 'admin123', role: 'admin' as const },
-  { id: '2', username: 'user', password: 'user123', role: 'user' as const }
-];
-
 export const useAuthStore = create<AuthStore>()(
   persist(
     (set, get) => ({
@@ -32,30 +26,69 @@ export const useAuthStore = create<AuthStore>()(
       users: [],
       
       initialize: () => {
-        // Check if we have users, if not add the initial ones
-        const { users } = get();
-        if (users.length === 0) {
-          set({ users: initialUsers });
-        }
+        // Fetch users from the API
+        fetch('/api/users')
+          .then(response => {
+            if (!response.ok) throw new Error('Failed to fetch users');
+            return response.json();
+          })
+          .then(data => {
+            if (data.users && Array.isArray(data.users)) {
+              set({ users: data.users });
+            }
+          })
+          .catch(error => {
+            console.error('Error initializing users:', error);
+            // Fallback to initial users if API fails
+            const { users } = get();
+            if (users.length === 0) {
+              const initialUsers = [
+                { id: '1', username: 'admin', role: 'admin' as const },
+                { id: '2', username: 'user', role: 'user' as const }
+              ];
+              set({ users: initialUsers });
+            }
+          });
       },
       
       login: async (username: string, password: string) => {
-        // In a real app, this would be an API call
-        const { users } = get();
-        const user = users.find(u => 
-          u.username === username && 
-          // In a real app, passwords would be hashed
-          (u as any).password === password
-        );
-        
-        if (user) {
-          // Remove password before storing in state
-          const { password: _, ...userWithoutPassword } = user as any;
-          set({ user: userWithoutPassword, isAuthenticated: true });
-          return true;
+        try {
+          // In a real app, this would be an API call
+          const response = await fetch('/api/users/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password }),
+          });
+          
+          if (!response.ok) {
+            return false;
+          }
+          
+          const data = await response.json();
+          if (data.success && data.user) {
+            set({ user: data.user, isAuthenticated: true });
+            return true;
+          }
+          
+          return false;
+        } catch (error) {
+          console.error('Login error:', error);
+          
+          // Fallback to mock login if API fails
+          const { users } = get();
+          const user = users.find(u => u.username === username);
+          
+          if (user) {
+            // In a real app, we'd verify the password here
+            // For demo purposes, accept any password when API is down
+            set({ user, isAuthenticated: true });
+            return true;
+          }
+          
+          return false;
         }
-        
-        return false;
       },
       
       logout: () => {
@@ -63,26 +96,76 @@ export const useAuthStore = create<AuthStore>()(
       },
       
       addUser: (username: string, password: string, role: 'admin' | 'user') => {
-        const { users } = get();
-        const newUser = {
-          id: Date.now().toString(),
-          username,
-          password,
-          role
-        };
-        
-        set({ users: [...users, newUser] });
+        try {
+          // Call the API to create a user
+          fetch('/api/users', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username, password, role }),
+          }).then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to create user');
+            }
+            return response.json();
+          }).then(data => {
+            if (data.success && data.user) {
+              const { users } = get();
+              set({ users: [...users, data.user] });
+            }
+          });
+        } catch (error) {
+          console.error('Error creating user:', error);
+          
+          // Fallback to local state update if API fails
+          const { users } = get();
+          const newUser = {
+            id: Date.now().toString(),
+            username,
+            role
+          };
+          
+          set({ users: [...users, newUser] });
+        }
       },
       
       deleteUser: (id: string) => {
-        const { users, user } = get();
-        
-        // Prevent deleting your own account
-        if (user?.id === id) {
-          return;
+        try {
+          // Call the API to delete a user
+          fetch('/api/users', {
+            method: 'DELETE',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ id }),
+          }).then(response => {
+            if (!response.ok) {
+              throw new Error('Failed to delete user');
+            }
+            
+            const { users, user } = get();
+            
+            // Prevent deleting your own account
+            if (user?.id === id) {
+              return;
+            }
+            
+            set({ users: users.filter(u => u.id !== id) });
+          });
+        } catch (error) {
+          console.error('Error deleting user:', error);
+          
+          // Fallback to local state update if API fails
+          const { users, user } = get();
+          
+          // Prevent deleting your own account
+          if (user?.id === id) {
+            return;
+          }
+          
+          set({ users: users.filter(u => u.id !== id) });
         }
-        
-        set({ users: users.filter(u => u.id !== id) });
       }
     }),
     {

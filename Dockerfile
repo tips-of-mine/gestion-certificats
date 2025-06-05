@@ -55,6 +55,7 @@ RUN cp -r dist/* /var/www/html/
 # Setup PHP API scripts to interface with the certificate scripts
 COPY api /var/www/html/api
 RUN chmod -R 755 /var/www/html/api
+RUN chown -R nginx:nginx /var/www/html/api
 
 # Create startup script
 COPY src/docker-entrypoint.sh docker-entrypoint.sh

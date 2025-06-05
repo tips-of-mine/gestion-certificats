@@ -9,6 +9,10 @@ type FormData = {
   role: 'admin' | 'user';
 };
 
+type UserWithPassword = User & {
+  password?: string;
+};
+
 export default function UserManagement() {
   const { t } = useTranslation();
   const { users, addUser, deleteUser, user: currentUser } = useAuthStore();
@@ -139,7 +143,7 @@ export default function UserManagement() {
         </div>
         
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {users.filter(u => (u as any).password).map((user: any) => (
+          {users.filter(u => (u as UserWithPassword).password).map((user) => (
             <li key={user.id} className="px-4 py-4 sm:px-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
